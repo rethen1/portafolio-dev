@@ -1,0 +1,56 @@
+---
+import Header from "../components/Header.astro";
+import About from "../components/About.astro";
+import Projects from "../components/Projects.astro";
+import Contact from "../components/Contact.astro"
+
+import "@fontsource-variable/open-sans";
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Portfolio</title>
+	</head>
+	<body class="flex justify-center items-center flex-col mi-h-screen">
+		<Header />
+		<main id="sobre-mí" class="flex-grow flex flex-col items-center justify-center">
+			<About />
+			<Projects />
+		</main>
+		<footer id="contacto" class="mt-20 pb-10 w-full">
+			<Contact />
+		</footer>
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		color-scheme: light dark;
+	}
+
+	header {
+		background: black;
+	}
+
+	html {
+		font-family: system-ui, sans-serif;
+		scroll-behavior: smooth;
+	}
+
+	body {
+		background: linear-gradient(135deg, #000000, #0f3103);
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		color: white;
+	}
+
+	@media (prefers-reduced-motion: reduce){
+		html{
+			scroll-behavior: auto;
+		}
+	}
+</style>
